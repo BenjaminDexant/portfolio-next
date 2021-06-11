@@ -1,6 +1,6 @@
 import { RiComputerFill } from "react-icons/ri";
 import { IoLogoJavascript, IoIosArrowForward } from "react-icons/io";
-import { DiReact } from "react-icons/Di";
+import { DiReact } from "react-icons/di";
 import { FaServer, FaDatabase, FaExchangeAlt, FaNodeJs, FaTools } from "react-icons/fa";
 import {
 	SiNextDotJs,
