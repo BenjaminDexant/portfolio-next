@@ -1,4 +1,9 @@
-import { GetServerSidePropsContext, GetStaticPropsContext } from "next";
+import {
+	GetServerSideProps,
+	GetServerSidePropsContext,
+	GetStaticProps,
+	GetStaticPropsContext,
+} from "next";
 import React from "react";
 import ServiceCard from "../components/ServiceCard";
 import { motion } from "framer-motion";
@@ -33,6 +38,7 @@ const index = () => {
 						<motion.div
 							variants={fadeInUp}
 							className="rounded-lg bg-lightPalette-green dark:bg-darkPalette-gray lg:col-span-1"
+							key={service.title}
 						>
 							<ServiceCard service={service} key={service.title} />
 						</motion.div>
@@ -44,3 +50,19 @@ const index = () => {
 };
 
 export default index;
+
+export const getServerSideProps: GetServerSideProps = async (
+	context: GetServerSidePropsContext
+) => {
+	const res = await fetch(`${process.env.SITE_URL}/api/services`);
+	const data = await res.json();
+	return { props: { services: data.services } };
+};
+
+/* 
+export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext) => {
+	const res = await fetch(`${process.env.SITE_URL}/api/services`);
+	const { services } = await res.json();
+	return { props: { services: services } };
+};
+ */

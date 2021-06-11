@@ -6,6 +6,7 @@ import { useState } from "react";
 import { BsDot } from "react-icons/bs";
 
 const Resume = () => {
+	// TODO : add button to hide / show resume details
 	const [details, setDetails] = useState("hidden");
 	return (
 		<motion.div

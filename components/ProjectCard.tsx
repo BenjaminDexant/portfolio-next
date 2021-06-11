@@ -79,7 +79,7 @@ const ProjectCard: FunctionComponent<{
 						</motion.div>
 					</div>
 					<button
-						onClick={() => setShowDetails(false)}
+						onClick={() => setShowDetails(null)}
 						className="absolute text-white bg-black rounded-full dark:text-black top-3 right-3 dark:bg-darkPalette-white focus:outline-none"
 					>
 						<IoMdClose size={30} />
