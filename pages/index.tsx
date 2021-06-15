@@ -1,4 +1,4 @@
-import { GetServerSidePropsContext, GetStaticProps, GetStaticPropsContext } from "next";
+import { GetStaticProps, GetStaticPropsContext } from "next";
 import Head from "next/head";
 import React from "react";
 import ServiceCard from "../components/ServiceCard";
@@ -49,10 +49,9 @@ const index = (props) => {
 
 export default index;
 
-export const getStaticProps: GetStaticProps = async (context: GetServerSidePropsContext) => {
+export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext) => {
 	const res = await fetch(`${process.env}/api/services`);
 	const data = await res.json();
-
 
 	//TODO : add a 404 page
 	/* if (!data) {
@@ -62,6 +61,6 @@ export const getStaticProps: GetStaticProps = async (context: GetServerSideProps
 	} */
 
 	return {
-		props: { data },
+		props: { services: data.services },
 	};
 };
