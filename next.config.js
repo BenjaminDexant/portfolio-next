@@ -4,3 +4,4 @@ module.exports = {
 		domains: ["media-exp1.licdn.com"],
 	},
 };
+
