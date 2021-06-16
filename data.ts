@@ -51,7 +51,7 @@ export const languages: ISkill[] = [
 	},
 	{
 		title: "Typescript",
-		level: "50%",
+		level: "70%",
 		Icon: SiTypescript,
 	},
 ];
@@ -72,22 +72,21 @@ export const devTools: ISkill[] = [
 		level: "70%",
 		Icon: FaNodeJs,
 	},
-	/* 	{
+	{
 		title: "Jest",
-		level: "10%",
+		level: "30%",
 		Icon: SiJest,
 	},
 	{
-		title: "Webpack custom config",
+		title: "Webpack",
 		level: "50%",
 		Icon: SiWebpack,
 	},
 	{
-		title: "Deployment & cloud providers (Netlify, Heroku, AWS, ..)",
-		level: "30%",
+		title: "Netlify, Heroku",
+		level: "70%",
 		Icon: AiOutlineCloudServer,
 	},
- */
 ];
 
 export const designTools: ISkill[] = [
@@ -103,7 +102,7 @@ export const designTools: ISkill[] = [
 	},
 	{
 		title: "Tailwind",
-		level: "30%",
+		level: "50%",
 		Icon: GoPrimitiveDot,
 	},
 	{
@@ -140,12 +139,27 @@ export const devopsTools: ISkill[] = [
 export const softSkills: ISkill[] = [
 	{
 		title: "Autonomous",
-		level: "80%",
+		level: "100%",
+		Icon: IoIosArrowForward,
+	},
+	{
+		title: "Teamwork",
+		level: "100%",
+		Icon: IoIosArrowForward,
+	},
+	{
+		title: "Curious",
+		level: "100%",
 		Icon: IoIosArrowForward,
 	},
 	{
 		title: "Management",
-		level: "80%",
+		level: "1000%",
+		Icon: IoIosArrowForward,
+	},
+	{
+		title: "Quality approach",
+		level: "100%",
 		Icon: IoIosArrowForward,
 	},
 ];
@@ -156,7 +170,7 @@ export const projects: IProject[] = [
 		name: "My Portfolio",
 		description: "App made with Next.js Typescript and Tailwind.css.",
 		image_path: "/images/portfolio.png",
-		deployed_url: "",
+		deployed_url: "https://benjamin-portfolio.netlify.app/",
 		repository_url: "https://github.com/BenjaminDexant/portfolio-next",
 		category: ["react", "next", "ts"],
 		tech_used: ["React.js", "Next.js", "Typescript", "Tailwind.css"],
@@ -172,15 +186,25 @@ export const projects: IProject[] = [
 		category: ["react", "mongo", "express", "heroku", "netlify"],
 		tech_used: ["React.js", "Express", "Node.js", "Netlify", "Heroku"],
 	},
-	/* {
+	{
 		id: 3,
 		name: "WebPPIT",
 		description:
-			"App created during my intership with the French Civil Aviation Authority using React.js, Websocket and Vanilla Javascript.",
-		image_path: "",
+			"App created during my intership with the French Civil Aviation Authority using React.js, Websocket and Vanilla Javascript. Migration from a desktop application to a JS web application of an Air Traffic Control simulation program. Graphical interface to assist and/or supervise operators during an Air Traffic Control simulation",
+		image_path: "/images/webppit.png",
 		deployed_url: "",
 		repository_url: "",
-		category: ["react"],
+		category: ["react", "node"],
 		tech_used: ["React.js", "Vanilla JS", "Node.js", "Websocket", "Regexp", "IVY bus"],
-	}, */
+	},
+	{
+		id: 4,
+		name: "Court Circuit",
+		description:"Association of producers and consumers promoting short circuits and local products",
+		image_path: "/images/courtcircuit.png",
+		deployed_url: "http://51.178.54.132/",
+		repository_url: "https://github.com/BenjaminDexant/tlse0320-p3-CourtCircuit-front",
+		category: ["react", "node", "express"],
+		tech_used: ["React.js", "Node.js", "Express", "MaterialUI", "OVH"],
+	},
 ];
