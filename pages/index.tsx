@@ -1,9 +1,14 @@
-import { GetStaticProps, GetStaticPropsContext } from "next";
+import {
+	GetServerSideProps,
+	GetServerSidePropsContext,
+	GetStaticProps,
+	GetStaticPropsContext,
+} from "next";
 import Head from "next/head";
 import React from "react";
 import ServiceCard from "../components/ServiceCard";
 import { motion } from "framer-motion";
-
+import { services } from "../data";
 import { componentFadeOut, fadeInUp, stagger } from "../animation";
 
 const index = (props) => {
@@ -32,7 +37,7 @@ const index = (props) => {
 					animate="animate"
 					className="grid gap-6 lg:grid-cols-2"
 				>
-					{props.map((service) => (
+					{services.map((service) => (
 						<motion.div
 							variants={fadeInUp}
 							className="rounded-lg bg-lightPalette-green dark:bg-darkPalette-gray lg:col-span-1"
@@ -49,18 +54,41 @@ const index = (props) => {
 
 export default index;
 
+/* const prod = process.env.NODE_ENV !== "production";
+console.log(prod);
+const url = prod ? `${process.env.SITE_URL}/api/services` : "http://localhost:3000/api/services";
+console.log(url);
 export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext) => {
-	const res = await fetch(`${process.env}/api/services`);
+	const res = await fetch(`${url}`);
 	const data = await res.json();
-
 	//TODO : add a 404 page
-	/* if (!data) {
-		return {
-			notFound: true,
-		};
-	} */
+	// if (!data) {
+	//	return {
+	//		notFound: true,
+	//	};
+	//}
 
 	return {
-		props: { services: data.services },
+		props: { data: data.data },
 	};
+}; */
+
+/* const prod = process.env.NODE_ENV !== "production";
+console.log(prod);
+const url = prod ? `${process.env.SITE_URL}/api/services` : "http://localhost:3000/api/services";
+export const getServerSideProps: GetServerSideProps = async (
+	context: GetServerSidePropsContext
+) => {
+	//const res = await fetch(`${url}`);
+	//const data = await res.json();
+	//if (!data) {
+	//	return {
+	//		redirect: {
+	//			destination: "/resume",
+	//			permanent: false,
+	//		},
+	//	};
+	//}
+	return { props: { services: data.services } };
 };
+ */
