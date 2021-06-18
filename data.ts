@@ -130,7 +130,7 @@ export const devopsTools: ISkill[] = [
 		Icon: SiDocker,
 	},
 	{
-		title: "GitHub action",
+		title: "CI / CD",
 		level: "30%",
 		Icon: GrIntegration,
 	},
@@ -154,7 +154,7 @@ export const softSkills: ISkill[] = [
 	},
 	{
 		title: "Management",
-		level: "1000%",
+		level: "100%",
 		Icon: IoIosArrowForward,
 	},
 	{

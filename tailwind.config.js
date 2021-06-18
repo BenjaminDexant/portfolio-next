@@ -5,6 +5,7 @@ module.exports = {
 		fontFamily: {
 			nunito: ["Nunito Sans"],
 			permanentMarker: ["Permanent Marker", "cursive"],
+			baloo: ["Baloo 2", "cursive"],
 		},
 		boxShadow: {
 			"custom-light": "0 0 10px #313131",

@@ -33,3 +33,8 @@ export type Categorie =
 	| "netlify"
 	| "heroku"
 	| "jest";
+
+export interface IDetails {
+	connected: boolean;
+	type: string;
+}

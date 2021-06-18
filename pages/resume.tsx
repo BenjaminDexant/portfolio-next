@@ -7,7 +7,9 @@ import { BsDot } from "react-icons/bs";
 
 const Resume = () => {
 	// TODO : add button to hide / show resume details
-	const [details, setDetails] = useState("hidden");
+	const [details1, setDetails1] = useState<boolean>(false);
+	const [details2, setDetails2] = useState<boolean>(false);
+	const [details3, setDetails3] = useState<boolean>(false);
 	return (
 		<motion.div
 			variants={componentFadeOut}
@@ -22,11 +24,23 @@ const Resume = () => {
 				<motion.div variants={fadeInUp} initial="initial" animate="animate">
 					<h5 className="my-2 text-2xl font-bold">Experience</h5>
 					<div>
-						<h6 className="flex items-center my-2 text-xl font-bold font">
-							<BsDot className="text-lightPalette-blue dark:text-darkPalette-orange" /> Developper
-							with way too much ideas coming at the same time - april 2020 to now
-						</h6>
-						<div className={details}>
+						<div className="flex">
+							<h6 className="flex items-center my-2 text-xl font-bold font">
+								<BsDot className="text-lightPalette-blue dark:text-darkPalette-orange" /> Developper
+								with way too much ideas coming at the same time - april 2020 to now
+							</h6>
+							<button
+								className="px-4 ml-4 text-black rounded-full bg-lightPalette-greenLight dark:bg-darkPalette-white focus:outline-none"
+								onClick={() => {
+									setDetails1(!details1);
+									setDetails2(false);
+									setDetails3(false);
+								}}
+							>
+								{details1 ? "Close détails" : "Click for détails"}
+							</button>
+						</div>
+						<div style={{ display: details1 ? "inline" : "none" }}>
 							<p className="my-2 ">Doing side projects for fun and to continue learning</p>
 							<ul className="pl-6 my-2 list-disc">
 								<li>Create a Website using React.js & Three.js</li>
@@ -39,11 +53,23 @@ const Resume = () => {
 						</div>
 					</div>
 					<div>
-						<h6 className="flex items-center my-2 text-xl font-bold font">
-							<BsDot className="text-lightPalette-blue dark:text-darkPalette-orange" /> Front End
-							Developper (Internship) - sept 2020 to march 2021
-						</h6>
-						<div className={details}>
+						<div className="flex">
+							<h6 className="flex items-center my-2 text-xl font-bold font">
+								<BsDot className="text-lightPalette-blue dark:text-darkPalette-orange" /> Front End
+								Developper (Internship) - sept 2020 to march 2021
+							</h6>
+							<button
+								className="px-4 py-0 ml-4 text-black rounded-full bg-lightPalette-greenLight dark:bg-darkPalette-white focus:outline-none"
+								onClick={() => {
+									setDetails2(!details2);
+									setDetails1(false);
+									setDetails3(false);
+								}}
+							>
+								{details2 ? "Close détails" : "Click for détails"}
+							</button>
+						</div>
+						<div style={{ display: details2 ? "inline" : "none" }}>
 							<p className="my-2 ">
 								Migration from a desktop application to a JS web application of an Air Traffic
 								Control simulation program. Graphical interface to assist and/or supervise operators
@@ -58,11 +84,24 @@ const Resume = () => {
 						<p className="italic font-semibold">French Civil Aviation Authority - Toulouse, FR</p>
 					</div>
 					<div>
-						<h6 className="flex items-center my-2 text-xl font-bold font">
-							<BsDot className="text-lightPalette-blue dark:text-darkPalette-orange" /> Front & Back
-							end Developper - march 2020 to sept 2020
-						</h6>
-						<div className={details}>
+						<div className="flex">
+							<h6 className="flex items-center my-2 text-xl font-bold font">
+								<BsDot className="text-lightPalette-blue dark:text-darkPalette-orange" /> Front &
+								Back end Developper - march 2020 to sept 2020
+							</h6>
+							<button
+								className="px-4 py-1 ml-4 text-black rounded-full bg-lightPalette-greenLight dark:bg-darkPalette-white focus:outline-none"
+								onClick={() => {
+									setDetails3(!details3);
+									setDetails1(false);
+									setDetails2(false);
+								}}
+							>
+								{details3 ? "Close détails" : "Click for détails"}
+							</button>
+						</div>
+
+						<div style={{ display: details3 ? "inline" : "none" }}>
 							<p className="my-2">
 								Projects completed during my training with some others students with Wild Code
 								School

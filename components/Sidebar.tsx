@@ -22,7 +22,7 @@ const Sidebar = () => {
 				height={120}
 				layout="intrinsic"
 			/>
-			<h3 className="my-4 text-2xl font-bold tracking-wider font-permanentMarker">
+			<h3 className="my-4 text-2xl font-bold tracking-wider font-baloo">
 				Benjamin{" "}
 				<span className="text-lightPalette-greenLight dark:text-darkPalette-orange">DEXANT</span>
 			</h3>
