@@ -18,27 +18,40 @@ import { IProject, IService, ISkill } from "./types";
 export const services: IService[] = [
 	{
 		title: "Front End Developer",
+		titleFr: "Développeur Front End",
 		about: "Build nice and scalable Single Page Application using <b>React.js</> & <b>Next.js</>",
+		aboutFr:
+			"Création de belles et évolutives Single Page Application à l'aide de <b>React.js</> & <b>Next.js</>",
 		Icon: RiComputerFill,
 	},
 	{
 		title: "Back End Developer",
+		titleFr: "Développeur Back End",
 		about: "Handle <b>Node.js</b> language and <b>API</b> calls using <b>Express</b>",
+		aboutFr: "Utilisation de <b>Node.js</b> et d'appels <b>API</b> avec <b>Express</b>",
 		Icon: FaServer,
 	},
 	{
 		title: "Database",
+		titleFr: "Base de données",
 		about: "Database developpement and management like <b>MongoDB Atlas</b> or <b>MySQL</b>",
+		aboutFr:
+			"Création et gestion de bases données Relationelles comme <b>MySQL</b> ou non relationelles comme <b>MongoDB</b>",
 		Icon: FaDatabase,
 	},
 	{
 		title: "WebSocket",
+		titleFr: "WebSocket",
 		about: "Set up a <b>WebSocket</b> connexion between user's browser and a server",
+		aboutFr:
+			"Création d'une connexion <b>WebSocket</b> entre le navigateur d'un utilisateur et d'un serveur",
 		Icon: FaExchangeAlt,
 	},
 	{
 		title: "DevOps tools",
+		titleFr: "Pratiques DevOps",
 		about: "Very interested into ! /* Skill in progress */",
+		aboutFr: "Très intéressé par le sujet /* Compétences en cours d'acquisition */",
 		Icon: FaTools,
 	},
 ];
@@ -168,7 +181,10 @@ export const projects: IProject[] = [
 	{
 		id: 1,
 		name: "My Portfolio",
-		description: "App made with Next.js Typescript and Tailwind.css.",
+		description:
+			"Basic portfolio site to show my skills and resume. App made with Next.js Typescript, and Tailwind.css.",
+		descriptionFr:
+			"Basique portfolio pour mettre en avant mes compétences et mon CV. Application créée à l'aide Next.js, Typescript et Tailwind.css",
 		image_path: "/images/portfolio.png",
 		deployed_url: "https://benjamin-portfolio.netlify.app/",
 		repository_url: "https://github.com/BenjaminDexant/portfolio-next",
@@ -180,6 +196,8 @@ export const projects: IProject[] = [
 		name: "Jason Crew",
 		description:
 			"App created and deployed as a test to be part of the Wild Code School Internship class.",
+		descriptionFr:
+			"Application web créée et mise en ligne afin d'être accepté au sein de la Wild Code School pour une annéee d'alternance (BAC +3/4)",
 		image_path: "/images/jasoncrew.png",
 		deployed_url: "https://silly-torvalds-e383c7.netlify.app/",
 		repository_url: "https://github.com/BenjaminDexant/jasoncrew-front-react",
@@ -190,7 +208,9 @@ export const projects: IProject[] = [
 		id: 3,
 		name: "WebPPIT",
 		description:
-			"App created during my intership with the French Civil Aviation Authority using React.js, Websocket and Vanilla Javascript. Migration from a desktop application to a JS web application of an Air Traffic Control simulation program. Graphical interface to assist and/or supervise operators during an Air Traffic Control simulation",
+			"App created during my intership with the French Civil Aviation Authority using React.js, Websocket and Vanilla Javascript. Migration from a desktop application to a JS web application of an Air Traffic Control simulation program. Graphical interface to assist and/or supervise operators during an Air Traffic Control simulation.",
+		descriptionFr:
+			"Application web créée à l'occasion de mon stage de 6 mois au sein de la Direction Générale de l'Aviation Civil au pôle de la Direction Technique et de l'Innovation. Migration d'une application de simulation de contrôle aérien vers une utilisation sur navigateur web Javascript. Interface graphique destinée à assister et/ou superviser un opérateur pendant une simulation de contrôle aérien.",
 		image_path: "/images/webppit.png",
 		deployed_url: "",
 		repository_url: "",
@@ -200,7 +220,10 @@ export const projects: IProject[] = [
 	{
 		id: 4,
 		name: "Court Circuit",
-		description:"Association of producers and consumers promoting short circuits and local products",
+		description:
+			"Association of producers and consumers promoting short circuits and local products. First full stack web app made during my training lessons with the Wild Code School.",
+		descriptionFr:
+			"Association de producteurs et de consommateurs ayant le but de favoriser les circuits courts et les produits locaux. Première application full stack créée pendant mon apprentissage à la Wild Code School.",
 		image_path: "/images/courtcircuit.png",
 		deployed_url: "http://51.178.54.132/",
 		repository_url: "https://github.com/BenjaminDexant/tlse0320-p3-CourtCircuit-front",

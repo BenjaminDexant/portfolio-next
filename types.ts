@@ -2,7 +2,9 @@ import { IconType } from "react-icons";
 
 export interface IService {
 	title: string;
+	titleFr: string;
 	about: string;
+	aboutFr: string
 	Icon: IconType;
 }
 
@@ -16,6 +18,7 @@ export interface IProject {
 	id: number;
 	name: string;
 	description: string;
+	descriptionFr: string;
 	image_path: string;
 	deployed_url: string;
 	repository_url: string;
