@@ -10,8 +10,12 @@ import ServiceCard from "../components/ServiceCard";
 import { motion } from "framer-motion";
 import { services } from "../data";
 import { componentFadeOut, fadeInUp, stagger } from "../animation";
+import { useLanguageContext } from "../context/language";
 
 const index = (props) => {
+	const languageContext = useLanguageContext();
+	let isEnglish = languageContext.contextLang;
+
 	return (
 		<motion.div
 			variants={componentFadeOut}
@@ -24,13 +28,17 @@ const index = (props) => {
 				<title>Benjamin Dexant | Web Developer | Portfolio</title>
 			</Head>
 			<h5 className="my-3 font-medium">
-				Hi ! I'm a Javascript developper with about two years experience.
+				{isEnglish
+					? "Hi ! I'm a Javascript developer with about two years experience. Looking at the moment for opportunities."
+					: "Bonjour ! Je suis un développeur Javascript avec environ deux d'expérience. Actuellement à l'écoute de nouvelles opportunités."}
 			</h5>
 			<div
 				className="flex-grow p-4 mt-5 bg-lightPalette-white dark:bg-darkPalette-white"
 				style={{ marginLeft: "-1.5rem", marginRight: "-1.5rem" }}
 			>
-				<h6 className="my-3 text-xl font-bold tracking-wide text-black">What I do :</h6>
+				<h6 className="my-3 text-xl font-bold tracking-wide text-black">
+					{isEnglish ? "What I do :" : "Ce que je sais faire :"}
+				</h6>
 				<motion.div
 					variants={stagger}
 					initial="initial"

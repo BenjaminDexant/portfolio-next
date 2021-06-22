@@ -4,12 +4,16 @@ import { motion } from "framer-motion";
 import { componentFadeOut, fadeInUp } from "../animation";
 import { useState } from "react";
 import { BsDot } from "react-icons/bs";
+import { useLanguageContext } from "../context/language";
 
 const Resume = () => {
 	// TODO : add button to hide / show resume details
 	const [details1, setDetails1] = useState<boolean>(false);
 	const [details2, setDetails2] = useState<boolean>(false);
 	const [details3, setDetails3] = useState<boolean>(false);
+	const languageContext = useLanguageContext();
+	let isEnglish = languageContext.contextLang;
+
 	return (
 		<motion.div
 			variants={componentFadeOut}
@@ -26,8 +30,10 @@ const Resume = () => {
 					<div>
 						<div className="flex">
 							<h6 className="flex items-center my-2 text-xl font-bold font">
-								<BsDot className="text-lightPalette-blue dark:text-darkPalette-orange" /> Developper
-								with way too much ideas coming at the same time - april 2020 to now
+								<BsDot className="text-lightPalette-blue dark:text-darkPalette-orange" />
+								{isEnglish
+									? "Developper with thirst of challenge and want to learn with practice - April 2021 to Now"
+									: "Développeur qui a soif de challenge et qui veut apprendre par la pratique - Avril 2021 à Maintenant"}
 							</h6>
 							<button
 								className="px-4 ml-4 text-black rounded-full bg-lightPalette-greenLight dark:bg-darkPalette-white focus:outline-none"
@@ -37,11 +43,21 @@ const Resume = () => {
 									setDetails3(false);
 								}}
 							>
-								{details1 ? "Close détails" : "Click for détails"}
+								{details1
+									? isEnglish
+										? "Close détails"
+										: "Fermer détails"
+									: isEnglish
+									? "Click for détails"
+									: "Ouvrir détails"}
 							</button>
 						</div>
 						<div style={{ display: details1 ? "inline" : "none" }}>
-							<p className="my-2 ">Doing side projects for fun and to continue learning</p>
+							<p className="my-2 ">
+								{isEnglish
+									? "Doing side projects for fun and to continue learning;"
+									: "Réalisation de projets persos pour m'amuser tout en apprenant et en assurant une veille technologique."}
+							</p>
 							<ul className="pl-6 my-2 list-disc">
 								<li>Create a Website using React.js & Three.js</li>
 								<li>Create a Portfolio Website using Next.js, Typescript & Tailwind & Framer</li>
@@ -55,8 +71,8 @@ const Resume = () => {
 					<div>
 						<div className="flex">
 							<h6 className="flex items-center my-2 text-xl font-bold font">
-								<BsDot className="text-lightPalette-blue dark:text-darkPalette-orange" /> Front End
-								Developper (Internship) - sept 2020 to march 2021
+								<BsDot className="text-lightPalette-blue dark:text-darkPalette-orange" />
+								Front End Developer (Internship) - sept 2020 to march 2021
 							</h6>
 							<button
 								className="px-4 py-0 ml-4 text-black rounded-full bg-lightPalette-greenLight dark:bg-darkPalette-white focus:outline-none"
@@ -66,7 +82,13 @@ const Resume = () => {
 									setDetails3(false);
 								}}
 							>
-								{details2 ? "Close détails" : "Click for détails"}
+								{details2
+									? isEnglish
+										? "Close détails"
+										: "Fermer détails"
+									: isEnglish
+									? "Click for détails"
+									: "Ouvrir détails"}
 							</button>
 						</div>
 						<div style={{ display: details2 ? "inline" : "none" }}>
@@ -87,7 +109,7 @@ const Resume = () => {
 						<div className="flex">
 							<h6 className="flex items-center my-2 text-xl font-bold font">
 								<BsDot className="text-lightPalette-blue dark:text-darkPalette-orange" /> Front &
-								Back end Developper - march 2020 to sept 2020
+								Back End Developer - march 2020 to sept 2020
 							</h6>
 							<button
 								className="px-4 py-1 ml-4 text-black rounded-full bg-lightPalette-greenLight dark:bg-darkPalette-white focus:outline-none"
@@ -97,7 +119,13 @@ const Resume = () => {
 									setDetails2(false);
 								}}
 							>
-								{details3 ? "Close détails" : "Click for détails"}
+								{details3
+									? isEnglish
+										? "Close détails"
+										: "Fermer détails"
+									: isEnglish
+									? "Click for détails"
+									: "Ouvrir détails"}
 							</button>
 						</div>
 
@@ -206,7 +234,7 @@ const Resume = () => {
 					<h5 className="my-2 text-2xl font-bold">Soft Skills</h5>
 					<div className="my2">
 						{softSkills.map((skill) => (
-							<Bar data={skill} key={skill.title} />
+							<Bar data={skill} key={isEnglish ? skill.title : skill.titleFr} />
 						))}
 					</div>
 				</div>

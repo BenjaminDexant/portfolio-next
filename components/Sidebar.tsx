@@ -24,9 +24,9 @@ const Sidebar = () => {
 				height={120}
 				layout="intrinsic"
 			/>
-			<h3 className="my-4 text-2xl font-bold tracking-wider font-baloo">
-				Benjamin{" "}
-				<span className="text-lightPalette-greenLight dark:text-darkPalette-orange">DEXANT</span>
+			<h3 className="flex flex-wrap justify-center my-4 text-2xl font-bold tracking-wider font-baloo">
+				Benjamin
+				<span className="ml-2 text-lightPalette-greenLight dark:text-darkPalette-orange">DEXANT</span>
 			</h3>
 			<p className="px-2 py-1 my-3 text-black rounded-full bg-lightPalette-greenLight dark:bg-darkPalette-white">
 				{isEnglish ? "Javascript Developer Web & Mobile" : "Développeur Javascript Web et Mobile"}
@@ -37,7 +37,7 @@ const Sidebar = () => {
 				download="BenjaminDexantResume.pdf"
 			>
 				<AiOutlineDownload className="w-6 h-6" />
-				Download Resume
+				{isEnglish ? "Download Resume" : "Téléchargement du CV"}
 			</a>
 			{/* social icons */}
 			<div className="flex justify-around mx-auto my-4 text-lightPalette-blue dark:text-darkPalette-orange md:w-full">
@@ -67,14 +67,20 @@ const Sidebar = () => {
 					onClick={() => window.open("mailto:benjamin.dexant@gmail.com")}
 				>
 					<AiOutlineMail className="w-1/4" />
-					<span className="w-3/4">Email me</span>
+					<span className="w-3/4">{isEnglish ? "Email me" : "Envoi moi un mail"}</span>
 				</button>
 				{/* toggle theme */}
 				<button
 					onClick={changeTheme}
 					className="flex items-center justify-around w-10/12 px-5 py-2 my-2 text-sm text-center text-black rounded-full md:w-6/12 lg:w-full bg-lightPalette-greenLight dark:bg-darkPalette-white focus:outline-none"
 				>
-					{theme === "light" ? "Switch to Dark Mode " : "Switch to Light Mode "}
+					{theme === "light"
+						? isEnglish
+							? "Switch to Dark Mode "
+							: "Passer en Dark Mode"
+						: isEnglish
+						? "Switch to Light Mode "
+						: "Passer en Light Mode"}
 					<div
 						className="flex w-1/6 text-white rounded-full lg:w-1/5 bg-lightPalette-white dark:bg-darkPalette-gray"
 						style={
@@ -94,18 +100,6 @@ const Sidebar = () => {
 					className="flex items-center justify-around w-10/12 px-5 py-2 my-2 text-sm text-center text-black rounded-full md:w-6/12 lg:w-full bg-lightPalette-greenLight dark:bg-darkPalette-white focus:outline-none"
 				>
 					{isEnglish ? "Passer en français " : "Switch to English "}
-					<div
-						className="flex w-1/6 text-white rounded-full lg:w-1/5 bg-lightPalette-white dark:bg-darkPalette-gray"
-						style={
-							theme === "dark" ? { justifyContent: "flex-end" } : { justifyContent: "flex-start" }
-						}
-					>
-						{isEnglish ? (
-							<FiMoon className="w-8 h-8 p-1 rounded-full bg-lightPalette-blue" />
-						) : (
-							<FiSun className="w-8 h-8 p-1 rounded-full bg-darkPalette-orange" />
-						)}
-					</div>
 				</button>
 			</div>
 		</div>

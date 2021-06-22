@@ -2,20 +2,23 @@ import { FunctionComponent, useState } from "react";
 import { AiFillGithub, AiFillProject } from "react-icons/ai";
 import { IoMdClose } from "react-icons/io";
 import { IProject } from "../types";
-
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeInUp, stagger } from "../animation";
+import { useLanguageContext } from "../context/language";
 
 const ProjectCard: FunctionComponent<{
 	project: IProject;
 	showDetails: null | number;
 	setShowDetails: (id: null | number) => void;
 }> = ({
-	project: { name, image_path, repository_url, deployed_url, description, tech_used, category, id },
+	project: { name, image_path, repository_url, deployed_url, description, descriptionFr, tech_used, category, id },
 	showDetails,
 	setShowDetails,
 }) => {
+	const languageContext = useLanguageContext();
+	let isEnglish = languageContext.contextLang;
+
 	return (
 		<div>
 			<Image
@@ -65,7 +68,7 @@ const ProjectCard: FunctionComponent<{
 					<div className="grid col-span-1">
 						<motion.div variants={fadeInUp} className="mt-7">
 							<h2 className="mb-3 text-xl font-medium md:text-2x1">{name}</h2>
-							<p className="mb-3 font-medium">{description}</p>
+							<p className="mb-3 font-medium">{isEnglish ? description : descriptionFr}</p>
 							<div className="flex flex-wrap mt-5 space-x-2 text-sm tracking-wider">
 								{tech_used.map((tech) => (
 									<span
