@@ -191,6 +191,7 @@ export const projects: IProject[] = [
 		descriptionFr:
 			"Basique portfolio pour mettre en avant mes compétences et mon CV. Application créée à l'aide Next.js, Typescript et Tailwind.css",
 		image_path: "/images/portfolio.png",
+		image_path2: "",
 		deployed_url: "https://benjamin-portfolio.netlify.app/",
 		repository_url: "https://github.com/BenjaminDexant/portfolio-next",
 		category: ["react", "next", "ts"],
@@ -204,6 +205,7 @@ export const projects: IProject[] = [
 		descriptionFr:
 			"Application web créée et mise en ligne afin d'être accepté au sein de la Wild Code School pour une annéee d'alternance (BAC +3/4)",
 		image_path: "/images/jasoncrew.png",
+		image_path2: "",
 		deployed_url: "https://silly-torvalds-e383c7.netlify.app/",
 		repository_url: "https://github.com/BenjaminDexant/jasoncrew-front-react",
 		category: ["react", "mongo", "express", "heroku", "netlify"],
@@ -217,6 +219,7 @@ export const projects: IProject[] = [
 		descriptionFr:
 			"Application web créée à l'occasion de mon stage de 6 mois au sein de la Direction Générale de l'Aviation Civil au pôle de la Direction Technique et de l'Innovation. Migration d'une application de simulation de contrôle aérien vers une utilisation sur navigateur web Javascript. Interface graphique destinée à assister et/ou superviser un opérateur pendant une simulation de contrôle aérien. Code et application sous licences.",
 		image_path: "/images/webppit.png",
+		image_path2: "",
 		deployed_url: "",
 		repository_url: "",
 		category: ["react", "node"],
@@ -230,6 +233,7 @@ export const projects: IProject[] = [
 		descriptionFr:
 			"Association de producteurs et de consommateurs ayant le but de favoriser les circuits courts et les produits locaux. Première application full stack créée pendant mon apprentissage à la Wild Code School.",
 		image_path: "/images/courtcircuit.png",
+		image_path2: "",
 		deployed_url: "http://51.178.54.132/",
 		repository_url: "https://github.com/BenjaminDexant/tlse0320-p3-CourtCircuit-front",
 		category: ["react", "node", "express"],

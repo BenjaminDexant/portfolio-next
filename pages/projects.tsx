@@ -30,8 +30,7 @@ const Projects = () => {
 			initial="initial"
 			animate="animate"
 			exit="exit"
-			className="px-5 py-2 overflow-y-scroll"
-			style={{ height: "65vh" }}
+			className="px-5 py-2"
 		>
 			<ProjectsNavbar handlerFilterCategory={handlerFilterCategory} active={active} />
 			<motion.div
@@ -43,7 +42,7 @@ const Projects = () => {
 				{displayProjects.map((project) => (
 					<motion.div
 						variants={fadeInUp}
-						className="col-span-12 py-2 sm:col-span-6 lg:col-span-4 bg-lightPalette-greenLight dark:bg-darkPalette-black"
+						className="col-span-12 py-2 lg:col-span-6 2xl:col-span-4 bg-lightPalette-greenLight dark:bg-darkPalette-black"
 						key={project.name}
 					>
 						<ProjectCard project={project} showDetails={showDetails} setShowDetails={setShowDetails} />

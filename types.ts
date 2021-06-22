@@ -27,6 +27,7 @@ export interface IProject {
 	description: string;
 	descriptionFr: string;
 	image_path: string;
+	image_path2: string;
 	deployed_url: string;
 	repository_url: string;
 	category: Categorie[];
