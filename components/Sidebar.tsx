@@ -5,10 +5,12 @@ import { FiMoon, FiSun } from "react-icons/fi";
 import { useTheme } from "next-themes";
 
 import Image from "next/image";
+import { useLanguageContext } from "../context/language";
 
 const Sidebar = () => {
+	const languageContext = useLanguageContext();
+	let isEnglish = languageContext.contextLang;
 	const { theme, setTheme } = useTheme();
-
 	const changeTheme = () => {
 		setTheme(theme === "light" ? "dark" : "light");
 	};
@@ -27,7 +29,7 @@ const Sidebar = () => {
 				<span className="text-lightPalette-greenLight dark:text-darkPalette-orange">DEXANT</span>
 			</h3>
 			<p className="px-2 py-1 my-3 text-black rounded-full bg-lightPalette-greenLight dark:bg-darkPalette-white">
-				Javascript Developer Web & Mobile
+				{isEnglish ? "Javascript Developer Web & Mobile" : "Développeur Javascript Web et Mobile"}
 			</p>
 			<a
 				href="/assets/BenjaminDexantResume.pdf"
@@ -80,6 +82,25 @@ const Sidebar = () => {
 						}
 					>
 						{theme === "light" ? (
+							<FiMoon className="w-8 h-8 p-1 rounded-full bg-lightPalette-blue" />
+						) : (
+							<FiSun className="w-8 h-8 p-1 rounded-full bg-darkPalette-orange" />
+						)}
+					</div>
+				</button>
+				{/* toggle language */}
+				<button
+					onClick={() => languageContext.setContextLang(!isEnglish)}
+					className="flex items-center justify-around w-10/12 px-5 py-2 my-2 text-sm text-center text-black rounded-full md:w-6/12 lg:w-full bg-lightPalette-greenLight dark:bg-darkPalette-white focus:outline-none"
+				>
+					{isEnglish ? "Passer en français " : "Switch to English "}
+					<div
+						className="flex w-1/6 text-white rounded-full lg:w-1/5 bg-lightPalette-white dark:bg-darkPalette-gray"
+						style={
+							theme === "dark" ? { justifyContent: "flex-end" } : { justifyContent: "flex-start" }
+						}
+					>
+						{isEnglish ? (
 							<FiMoon className="w-8 h-8 p-1 rounded-full bg-lightPalette-blue" />
 						) : (
 							<FiSun className="w-8 h-8 p-1 rounded-full bg-darkPalette-orange" />
