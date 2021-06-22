@@ -14,6 +14,13 @@ export interface ISkill {
 	Icon: IconType;
 }
 
+export interface ISSkill {
+	title: string;
+	titleFr: string;
+	level: string;
+	Icon: IconType;
+}
+
 export interface IProject {
 	id: number;
 	name: string;

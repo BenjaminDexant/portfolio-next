@@ -13,7 +13,7 @@ import {
 import { GoPrimitiveDot } from "react-icons/go";
 import { GrIntegration } from "react-icons/gr";
 import { AiOutlineCloudServer } from "react-icons/ai";
-import { IProject, IService, ISkill } from "./types";
+import { IProject, IService, ISkill, ISSkill } from "./types";
 
 export const services: IService[] = [
 	{
@@ -149,29 +149,34 @@ export const devopsTools: ISkill[] = [
 	},
 ];
 
-export const softSkills: ISkill[] = [
+export const softSkills: ISSkill[] = [
 	{
 		title: "Autonomous",
+		titleFr: "Autonome",
 		level: "100%",
 		Icon: IoIosArrowForward,
 	},
 	{
 		title: "Teamwork",
+		titleFr: "Travail d'équipe",
 		level: "100%",
 		Icon: IoIosArrowForward,
 	},
 	{
 		title: "Curious",
+		titleFr: "Curieux",
 		level: "100%",
 		Icon: IoIosArrowForward,
 	},
 	{
 		title: "Management",
+		titleFr: "Management",
 		level: "100%",
 		Icon: IoIosArrowForward,
 	},
 	{
 		title: "Quality approach",
+		titleFr: "Démarche qualité",
 		level: "100%",
 		Icon: IoIosArrowForward,
 	},
@@ -208,9 +213,9 @@ export const projects: IProject[] = [
 		id: 3,
 		name: "WebPPIT",
 		description:
-			"App created during my intership with the French Civil Aviation Authority using React.js, Websocket and Vanilla Javascript. Migration from a desktop application to a JS web application of an Air Traffic Control simulation program. Graphical interface to assist and/or supervise operators during an Air Traffic Control simulation.",
+			"App created during my intership with the French Civil Aviation Authority using React.js, Websocket and Vanilla Javascript. Migration from a desktop application to a JS web application of an Air Traffic Control simulation program. Graphical interface to assist and/or supervise operators during an Air Traffic Control simulation. Code & app under lisense.",
 		descriptionFr:
-			"Application web créée à l'occasion de mon stage de 6 mois au sein de la Direction Générale de l'Aviation Civil au pôle de la Direction Technique et de l'Innovation. Migration d'une application de simulation de contrôle aérien vers une utilisation sur navigateur web Javascript. Interface graphique destinée à assister et/ou superviser un opérateur pendant une simulation de contrôle aérien.",
+			"Application web créée à l'occasion de mon stage de 6 mois au sein de la Direction Générale de l'Aviation Civil au pôle de la Direction Technique et de l'Innovation. Migration d'une application de simulation de contrôle aérien vers une utilisation sur navigateur web Javascript. Interface graphique destinée à assister et/ou superviser un opérateur pendant une simulation de contrôle aérien. Code et application sous licences.",
 		image_path: "/images/webppit.png",
 		deployed_url: "",
 		repository_url: "",
