@@ -30,7 +30,7 @@ const index = (props) => {
 			<h5 className="my-3 font-medium">
 				{isEnglish
 					? "Hi ! I'm a Javascript developer with about two years experience. Looking at the moment for opportunities."
-					: "Bonjour ! Je suis un développeur Javascript avec environ deux d'expérience. Actuellement à l'écoute de nouvelles opportunités."}
+					: "Bonjour ! Je suis un développeur Javascript avec environ deux ans d'expérience. Actuellement à l'écoute de nouvelles opportunités."}
 			</h5>
 			<div
 				className="flex-grow p-4 mt-5 bg-lightPalette-white dark:bg-darkPalette-white"

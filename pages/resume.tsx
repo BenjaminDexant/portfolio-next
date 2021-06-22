@@ -56,7 +56,7 @@ const Resume = () => {
 							<p className="my-2 ">
 								{isEnglish
 									? "Doing side projects for fun and to continue learning;"
-									: "Réalisation de projets persos pour m'amuser tout en apprenant et en assurant une veille technologique."}
+									: "Réalisation de projets personels pour le plaisir tout en apprenant et en assurant une veille technologique."}
 							</p>
 							<ul className="pl-6 my-2 list-disc">
 								<li>Create a Website using React.js & Three.js</li>
