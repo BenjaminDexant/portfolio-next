@@ -7,12 +7,20 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 import { useLanguageContext } from "../context/language";
 
-const Sidebar = () => {
+const Sidebar = ({ activeItem, setActiveItem }) => {
 	const languageContext = useLanguageContext();
 	let isEnglish = languageContext.contextLang;
 	const { theme, setTheme } = useTheme();
 	const changeTheme = () => {
 		setTheme(theme === "light" ? "dark" : "light");
+	};
+	const updateActiveItem = (item) => {
+		if (item === "About Me") setActiveItem("A propos de moi");
+		if (item === "A propos de moi") setActiveItem("About Me");
+		if (item === "My Resume") setActiveItem("Mon CV");
+		if (item === "Mon CV") setActiveItem("My Resume");
+		if (item === "My Projects") setActiveItem("Mes Projets");
+		if (item === "Mes Projets") setActiveItem("My Projects");
 	};
 	return (
 		<div>
@@ -26,7 +34,9 @@ const Sidebar = () => {
 			/>
 			<h3 className="flex flex-wrap justify-center my-4 text-2xl font-bold tracking-wider font-baloo">
 				Benjamin
-				<span className="ml-2 text-lightPalette-greenLight dark:text-darkPalette-orange">DEXANT</span>
+				<span className="ml-2 text-lightPalette-greenLight dark:text-darkPalette-orange">
+					DEXANT
+				</span>
 			</h3>
 			<p className="px-2 py-1 my-3 text-black rounded-full bg-lightPalette-greenLight dark:bg-darkPalette-white">
 				{isEnglish ? "Javascript Developer Web & Mobile" : "Développeur Javascript Web et Mobile"}
@@ -96,7 +106,9 @@ const Sidebar = () => {
 				</button>
 				{/* toggle language */}
 				<button
-					onClick={() => languageContext.setContextLang(!isEnglish)}
+					onClick={() => {
+						languageContext.setContextLang(!isEnglish), updateActiveItem(activeItem);
+					}}
 					className="flex items-center justify-around w-10/12 px-5 py-2 my-2 text-sm text-center text-black rounded-full md:w-6/12 lg:w-full bg-lightPalette-greenLight dark:bg-darkPalette-white focus:outline-none"
 				>
 					{isEnglish ? "Passer en français " : "Switch to English "}

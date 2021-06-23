@@ -20,8 +20,7 @@ const NavItem: FunctionComponent<{
 	) : null;
 };
 
-const Navbar = () => {
-	const [activeItem, setActiveItem] = useState<string>("");
+const Navbar = ({ activeItem, setActiveItem }) => {
 	const { pathname } = useRouter();
 	const languageContext = useLanguageContext();
 	let isEnglish = languageContext.contextLang;
@@ -31,6 +30,7 @@ const Navbar = () => {
 		if (pathname === "/resume") setActiveItem(isEnglish ? "My Resume" : "Mon CV");
 		if (pathname === "/projects") setActiveItem(isEnglish ? "My Projects" : "Mes Projets");
 	}, []);
+
 	return (
 		<div className="flex justify-between px-5 py-5 my-3">
 			<span className="text-lg font-bold border-b-4 border-white dark:border-black lg:text-2xl">
