@@ -49,7 +49,7 @@ const ProjectCard: FunctionComponent<{
 					animate="animate"
 					className="sticky z-10 w-full p-2 text-black lg:absolute lg:top-4 lg:left-4 lg:grid lg:w-11/12 lg:max-h-96 md:p-4 lg:grid-cols-2 lg:grid-rows-3 lg:gap-x-4 lg:gap-y-10 dark:text-white bg-lightPalette-greenLight dark:bg-darkPalette-black"
 				>
-					<motion.div variants={fadeInUp} className="lg:col-start-1 lg:row-span-1">
+					<motion.div variants={fadeInUp} className="hidden lg:col-span-1 lg:row-span-1 lg:block">
 						<Image
 							src={image_path}
 							alt={name}
@@ -62,7 +62,7 @@ const ProjectCard: FunctionComponent<{
 					</motion.div>
 					<motion.div
 						variants={fadeInUp}
-						className="flex justify-center mt-4 space-x-3 xl:mt-8 lg:mt-1 lg:col-start-2 xl:col-start-1 lg:row-span-1 xl:row-start-3"
+						className="flex justify-center mt-4 space-x-3 xl:mt-8 lg:mt-1 lg:col-span-1 xl:col-start-1 lg:row-span-1 xl:row-start-3"
 					>
 						<a
 							href={repository_url}
@@ -77,9 +77,9 @@ const ProjectCard: FunctionComponent<{
 							<AiFillProject /> <span>Project</span>
 						</a>
 					</motion.div>
-					<motion.div variants={fadeInUp} className="lg:col-span-2 xl:col-start-2 lg:row-start-1">
-						<h2 className="my-2 text-xl font-medium md:text-2x1 xl:text-3xl">{name}</h2>
-						<p className="my-2 text-sm font-light md:text-base xl:text-xl">{isEnglish ? description : descriptionFr}</p>
+					<motion.div variants={fadeInUp} className="lg:col-start-2 xl:col-start-2 lg:row-start-1">
+						<h2 className="my-2 text-xl font-medium xl:text-2xl">{name}</h2>
+						<p className="my-2 text-sm font-light xl:text-base">{isEnglish ? description : descriptionFr}</p>
 						<div className="flex flex-wrap my-2 space-x-2 text-sm tracking-wider">
 							{tech_used.map((tech) => (
 								<span
