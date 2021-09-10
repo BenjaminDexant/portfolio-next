@@ -15,9 +15,8 @@ App is live here : https://benjamin-portfolio.netlify.app/
  
 # To Do
 
- - bug fix
- - english / french toggle
- - show / hide resume details
- - ...
+ - improve box-shadow
+ - improve UX in desktop mode : replace pop-up (absolute position) with a flexbox solution
+ - ..
  
 
