@@ -43,7 +43,9 @@ export type Categorie =
 	| "ts"
 	| "netlify"
 	| "heroku"
-	| "jest";
+	| "jest"
+	| "graphql"
+	| "rtl";
 
 export interface IDetails {
 	connected: boolean;

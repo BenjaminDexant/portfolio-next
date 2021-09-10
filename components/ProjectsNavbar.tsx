@@ -26,10 +26,13 @@ const ProjectsNavbar: FunctionComponent<{ handlerFilterCategory: Function; activ
 			<NavItem value="react" {...props} />
 			<NavItem value="next" {...props} />
 			<NavItem value="node" {...props} />
+			<NavItem value="graphql" {...props} />
 			<NavItem value="mongo" {...props} />
 			<NavItem value="ts" {...props} />
 			<NavItem value="netlify" {...props} />
 			<NavItem value="heroku" {...props} />
+			<NavItem value="jest" {...props} />
+			<NavItem value="rtl" {...props} />
 		</div>
 	);
 };

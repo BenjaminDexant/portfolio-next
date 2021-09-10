@@ -194,8 +194,8 @@ export const projects: IProject[] = [
 		image_path2: "",
 		deployed_url: "https://benjamin-portfolio.netlify.app/",
 		repository_url: "https://github.com/BenjaminDexant/portfolio-next",
-		category: ["react", "next", "ts"],
-		tech_used: ["React.js", "Next.js", "Typescript", "Tailwind.css"],
+		category: ["next", "ts", "netlify"],
+		tech_used: ["Next.js", "Typescript", "Tailwind.css", "Netlify"],
 	},
 	{
 		id: 2,
@@ -238,5 +238,19 @@ export const projects: IProject[] = [
 		repository_url: "https://github.com/BenjaminDexant/tlse0320-p3-CourtCircuit-front",
 		category: ["react", "node", "express"],
 		tech_used: ["React.js", "Node.js", "Express", "MaterialUI", "OVH"],
+	},
+	{
+		id: 5,
+		name: "Marvel Wiki",
+		description:
+			"Marvel wiki using the official Marvel API (https://developer.marvel.com/) made with React. The REST API is wrapped with GraphQL. It makes easier using the API since the official API is so HUGE!",
+		descriptionFr:
+			"Un wiki à propos de l'univers Marvel créé avec React à l'aide de l'API officielle (https://developer.marvel.com/). Au vu de la taille et de la quantité de données fournies j'ai wrappé l'API REST avec GraphQL. Ceci rend l'accès aux données souhaitées bien plus lisible.",
+		image_path: "/images/wikiMarvel.png",
+		image_path2: "",
+		deployed_url: "https://marvelwiki-react.netlify.app/",
+		repository_url: "https://github.com/BenjaminDexant/wikimarvel-react",
+		category: ["react", "node", "graphql", "netlify", "jest", "rtl", "heroku"],
+		tech_used: ["React.js", "Node.js", "GraphQL", "Netlify", "Heroku"],
 	},
 ];

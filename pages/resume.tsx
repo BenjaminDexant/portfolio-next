@@ -11,6 +11,7 @@ const Resume = () => {
 	const [details1, setDetails1] = useState<boolean>(false);
 	const [details2, setDetails2] = useState<boolean>(false);
 	const [details3, setDetails3] = useState<boolean>(false);
+	const [details4, setDetails4] = useState<boolean>(false);
 	const languageContext = useLanguageContext();
 	let isEnglish = languageContext.contextLang;
 
@@ -32,8 +33,45 @@ const Resume = () => {
 							<h6 className="flex items-center my-2 text-xl font-bold font">
 								<BsDot className="text-lightPalette-blue dark:text-darkPalette-orange" />
 								{isEnglish
-									? "Developper with thirst of challenge and want to learn with practice - April 2021 to Now"
-									: "Développeur qui a soif de challenge et qui veut apprendre par la pratique - Avril 2021 à Maintenant"}
+									? "Developer & DevOps- Sept 2021 to Now"
+									: "Développeur & DevOps - Sept 2021 à maintenant"}
+							</h6>
+							<button
+								className="px-4 ml-4 text-black rounded-full bg-lightPalette-greenLight dark:bg-darkPalette-white focus:outline-none"
+								onClick={() => {
+									setDetails1(false);
+									setDetails2(false);
+									setDetails3(false);
+									setDetails4(!details4);
+								}}
+							>
+								{details4
+									? isEnglish
+										? "Close détails"
+										: "Fermer détails"
+									: isEnglish
+									? "Click for détails"
+									: "Ouvrir détails"}
+							</button>
+						</div>
+						<div style={{ display: details4 ? "inline" : "none" }}>
+							<ul className="pl-6 my-2 list-disc">
+								<li>TypeScript, React, Node</li>
+								<li>GraphQL</li>
+								<li>gitlab CI/CD</li>
+								<li>Kubernetes, Docker</li>
+								<li>UI/UX design</li>
+							</ul>
+						</div>
+						<p className="italic font-semibold">Make-IT - Full-Remote</p>
+					</div>
+					<div>
+						<div className="flex">
+							<h6 className="flex items-center my-2 text-xl font-bold font">
+								<BsDot className="text-lightPalette-blue dark:text-darkPalette-orange" />
+								{isEnglish
+									? "Developper who keep coding sides projects - April 2021 to Sept 2021"
+									: "Développeur qui crée des projets persos - Avril 2021 à Sept 2021"}
 							</h6>
 							<button
 								className="px-4 ml-4 text-black rounded-full bg-lightPalette-greenLight dark:bg-darkPalette-white focus:outline-none"
@@ -41,6 +79,7 @@ const Resume = () => {
 									setDetails1(!details1);
 									setDetails2(false);
 									setDetails3(false);
+									setDetails4(false);
 								}}
 							>
 								{details1
@@ -59,7 +98,7 @@ const Resume = () => {
 									: "Réalisation de projets personels pour le plaisir tout en apprenant et en assurant une veille technologique."}
 							</p>
 							<ul className="pl-6 my-2 list-disc">
-								<li>Create a Website using React.js & Three.js</li>
+								<li>Create a Website about Marvel Univers using React.js & GraphQL & Unit tests</li>
 								<li>Create a Portfolio Website using Next.js, Typescript & Tailwind & Framer</li>
 								<li>
 									Create a React app deployed with Netlify, server deployed with Heroku and a
@@ -80,6 +119,7 @@ const Resume = () => {
 									setDetails2(!details2);
 									setDetails1(false);
 									setDetails3(false);
+									setDetails4(false);
 								}}
 							>
 								{details2
@@ -117,6 +157,7 @@ const Resume = () => {
 									setDetails3(!details3);
 									setDetails1(false);
 									setDetails2(false);
+									setDetails4(false);
 								}}
 							>
 								{details3
@@ -128,7 +169,6 @@ const Resume = () => {
 									: "Ouvrir détails"}
 							</button>
 						</div>
-
 						<div style={{ display: details3 ? "inline" : "none" }}>
 							<p className="my-2">
 								Projects completed during my training with some others students with Wild Code
